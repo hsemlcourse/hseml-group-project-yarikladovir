@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [
+    ".venv",
+    "__pycache__",
+    ".ipynb_checkpoints"
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B018", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["F401", "F811", "I001", "B018", "B905"]
